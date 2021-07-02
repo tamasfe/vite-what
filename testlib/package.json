@@ -1,0 +1,32 @@
+{
+  "name": "testlib",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "types": "types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/testlib.umd.js",
+  "module": "./dist/testlib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/testlib.es.js",
+      "require": "./dist/testlib.umd.js"
+    }
+  },
+  "dependencies": {
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^15.14.0",
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vue/compiler-sfc": "^3.0.5",
+    "typescript": "^4.3.2",
+    "vite": "^2.3.8",
+    "vue-tsc": "^0.0.24"
+  }
+}
